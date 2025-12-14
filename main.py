@@ -18,7 +18,7 @@ from google.genai import types
 # --- 1. SETUP & INITIALIZATION ---
 
 # >>>>> CRITICAL TEMPORARY FIX: HARDCODE YOUR NEW, FRESH KEY HERE <<<<<
-GEMINI_API_KEY = "AIzaSyBfQ0CP8a6yrwAerPnQojuzOFiLAQOpt38" 
+GEMINI_API_KEY = "AIzaSyBGIlGYoNWegDahqlOWtWQT2oYOVsvdKjQ" 
 
 # Initialize the Gemini Client using the hardcoded key
 client = genai.Client(api_key=GEMINI_API_KEY)
@@ -110,4 +110,5 @@ async def chat_with_lily(request: ChatRequest):
         if "RESOURCE_EXHAUSTED" in str(e):
              return {"response": "Error: You have exceeded the free rate limit (too many requests per minute). Please wait 60 seconds."}
         
+
         return {"response": "I'm sorry, Lily encountered a major technical issue. Please check the server console."}
