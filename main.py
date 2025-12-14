@@ -20,7 +20,7 @@ from google.genai import types
 # >>>>> CRITICAL TEMPORARY FIX: HARDCODE YOUR NEW, FRESH KEY HERE <<<<<
 import os
 # The variable name is 'GEMINI_API_KEY'
-GEMINI_API_KEY = os.getenv("AIzaSyBGIlGYoNWegDahqlOWtWQT2oYOVsvdKjQ")
+GEMINI_API_KEY = os.getenv("AIzaSyDPYHKdTZzp8C5OhzJ-iOSmtlRzAjyL1D0")
 
 # Initialize the Gemini Client using the hardcoded key
 client = genai.Client(api_key=GEMINI_API_KEY)
@@ -114,4 +114,5 @@ async def chat_with_lily(request: ChatRequest):
         
 
         return {"response": "I'm sorry, Lily encountered a major technical issue. Please check the server console."}
+
 
